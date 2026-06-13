@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply — Drive With BBE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="apply.css">
+</head>
+<body>
+
+  <!-- Loader -->
+  <div class="ap-loader" id="apLoader">
+    <div class="ap-loader__logo">
+      <span class="apl-icon"><svg width="18" height="22" viewBox="0 0 16 20" fill="none"><line x1="3" y1="1" x2="9" y2="19" stroke="white" stroke-width="2.8" stroke-linecap="round"/><line x1="7" y1="1" x2="13" y2="19" stroke="white" stroke-width="2.8" stroke-linecap="round"/></svg></span>
+      <span class="apl-text">BBE</span>
+    </div>
+  </div>
+
+  <div class="ap-wrap">
+
+    <!-- ═══ LEFT SIDEBAR ═══ -->
+    <aside class="ap-sidebar">
+      <div class="ap-sidebar__inner">
+        <a href="index.html" class="ap-logo">
+          <span class="ap-logo__icon"><svg width="14" height="18" viewBox="0 0 16 20" fill="none"><line x1="3" y1="1" x2="9" y2="19" stroke="white" stroke-width="2.8" stroke-linecap="round"/><line x1="7" y1="1" x2="13" y2="19" stroke="white" stroke-width="2.8" stroke-linecap="round"/></svg></span>
+          <span class="ap-logo__text">BBE</span>
+        </a>
+
+        <div class="ap-sidebar__content">
+          <p class="ap-sidebar__label">JOIN THE TEAM</p>
+          <h1 class="ap-sidebar__heading">START YOUR<br>JOURNEY<br>WITH BBE</h1>
+          <p class="ap-sidebar__sub">Reliable routes. Consistent miles. A company that has your back.</p>
+
+          <ul class="ap-benefits">
+            <li class="ap-benefit">
+              <span class="ap-benefit__icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="2">
+                  <polyline points="2,8 6,12 14,4"/>
+                </svg>
+              </span>
+              Competitive pay per mile
+            </li>
+            <li class="ap-benefit">
+              <span class="ap-benefit__icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="2">
+                  <polyline points="2,8 6,12 14,4"/>
+                </svg>
+              </span>
+              Drop &amp; hook — no waiting
+            </li>
+            <li class="ap-benefit">
+              <span class="ap-benefit__icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="2">
+                  <polyline points="2,8 6,12 14,4"/>
+                </svg>
+              </span>
+              Safety-first culture
+            </li>
+            <li class="ap-benefit">
+              <span class="ap-benefit__icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="white" stroke-width="2">
+                  <polyline points="2,8 6,12 14,4"/>
+                </svg>
+              </span>
+              48 states covered
+            </li>
+          </ul>
+        </div>
+
+        <div class="ap-sidebar__contact">
+          <p class="ap-sidebar__contact-label">Questions?</p>
+          <a href="tel:+13312454514" class="ap-sidebar__phone">+1 (331) 245-4514</a>
+          <a href="mailto:drivers@bigblackeagle.com" class="ap-sidebar__email">drivers@bigblackeagle.com</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ═══ MAIN FORM AREA ═══ -->
+    <main class="ap-main">
+
+      <!-- Progress -->
+      <div class="ap-progress" id="apProgress">
+        <div class="ap-progress__bar">
+          <div class="ap-progress__fill" id="progressFill"></div>
+        </div>
+        <div class="ap-progress__steps">
+          <div class="ap-step-dot is-active" data-step-dot="1">
+            <span class="ap-step-dot__num">1</span>
+            <span class="ap-step-dot__label">Personal</span>
+          </div>
+          <div class="ap-step-dot" data-step-dot="2">
+            <span class="ap-step-dot__num">2</span>
+            <span class="ap-step-dot__label">Experience</span>
+          </div>
+          <div class="ap-step-dot" data-step-dot="3">
+            <span class="ap-step-dot__num">3</span>
+            <span class="ap-step-dot__label">Preferences</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form wrapper -->
+      <div class="ap-form-wrap">
+
+        <!-- STEP 1 -->
+        <div class="ap-step is-active" data-step="1">
+          <div class="ap-step__head">
+            <p class="ap-step__kicker">Step 1 of 3</p>
+            <h2 class="ap-step__title">Personal Information</h2>
+            <p class="ap-step__desc">Tell us a bit about yourself so we can reach out.</p>
+          </div>
+          <form class="ap-form" id="step1Form" novalidate>
+            <div class="ap-row">
+              <div class="ap-field">
+                <input class="ap-input" type="text" id="firstName" placeholder=" " required>
+                <label class="ap-label" for="firstName">First Name</label>
+                <span class="ap-error">Please enter your first name</span>
+              </div>
+              <div class="ap-field">
+                <input class="ap-input" type="text" id="lastName" placeholder=" " required>
+                <label class="ap-label" for="lastName">Last Name</label>
+                <span class="ap-error">Please enter your last name</span>
+              </div>
+            </div>
+            <div class="ap-field">
+              <input class="ap-input" type="email" id="email" placeholder=" " required>
+              <label class="ap-label" for="email">Email Address</label>
+              <span class="ap-error">Please enter a valid email</span>
+            </div>
+            <div class="ap-row">
+              <div class="ap-field">
+                <input class="ap-input" type="tel" id="phone" placeholder=" " required>
+                <label class="ap-label" for="phone">Phone Number</label>
+                <span class="ap-error">Please enter your phone number</span>
+              </div>
+              <div class="ap-field">
+                <select class="ap-input ap-select" id="state" required>
+                  <option value="" disabled selected></option>
+                  <option>Alabama</option><option>Alaska</option><option>Arizona</option>
+                  <option>Arkansas</option><option>California</option><option>Colorado</option>
+                  <option>Connecticut</option><option>Delaware</option><option>Florida</option>
+                  <option>Georgia</option><option>Idaho</option><option>Illinois</option>
+                  <option>Indiana</option><option>Iowa</option><option>Kansas</option>
+                  <option>Kentucky</option><option>Louisiana</option><option>Maine</option>
+                  <option>Maryland</option><option>Massachusetts</option><option>Michigan</option>
+                  <option>Minnesota</option><option>Mississippi</option><option>Missouri</option>
+                  <option>Montana</option><option>Nebraska</option><option>Nevada</option>
+                  <option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option>
+                  <option>New York</option><option>North Carolina</option><option>North Dakota</option>
+                  <option>Ohio</option><option>Oklahoma</option><option>Oregon</option>
+                  <option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option>
+                  <option>South Dakota</option><option>Tennessee</option><option>Texas</option>
+                  <option>Utah</option><option>Vermont</option><option>Virginia</option>
+                  <option>Washington</option><option>West Virginia</option><option>Wisconsin</option>
+                  <option>Wyoming</option>
+                </select>
+                <label class="ap-label ap-label--select" for="state">State</label>
+                <span class="ap-error">Please select your state</span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="ap-step" data-step="2">
+          <div class="ap-step__head">
+            <p class="ap-step__kicker">Step 2 of 3</p>
+            <h2 class="ap-step__title">Driving Experience</h2>
+            <p class="ap-step__desc">We want to understand your background on the road.</p>
+          </div>
+          <form class="ap-form" id="step2Form" novalidate>
+            <div class="ap-field-group">
+              <label class="ap-group-label">CDL Class</label>
+              <div class="ap-radio-group">
+                <label class="ap-radio">
+                  <input type="radio" name="cdl" value="A" required>
+                  <span class="ap-radio__box"></span>
+                  Class A
+                </label>
+                <label class="ap-radio">
+                  <input type="radio" name="cdl" value="B">
+                  <span class="ap-radio__box"></span>
+                  Class B
+                </label>
+                <label class="ap-radio">
+                  <input type="radio" name="cdl" value="none">
+                  <span class="ap-radio__box"></span>
+                  No CDL
+                </label>
+              </div>
+            </div>
+
+            <div class="ap-field">
+              <select class="ap-input ap-select" id="experience" required>
+                <option value="" disabled selected></option>
+                <option value="<1">Less than 1 year</option>
+                <option value="1-3">1 – 3 years</option>
+                <option value="3-5">3 – 5 years</option>
+                <option value="5-10">5 – 10 years</option>
+                <option value="10+">10+ years</option>
+              </select>
+              <label class="ap-label ap-label--select" for="experience">Years of Driving Experience</label>
+              <span class="ap-error">Please select your experience level</span>
+            </div>
+
+            <div class="ap-field-group">
+              <label class="ap-group-label">Endorsements (select all that apply)</label>
+              <div class="ap-check-group">
+                <label class="ap-check"><input type="checkbox" value="hazmat"><span class="ap-check__box"></span>Hazmat</label>
+                <label class="ap-check"><input type="checkbox" value="tanker"><span class="ap-check__box"></span>Tanker</label>
+                <label class="ap-check"><input type="checkbox" value="doubles"><span class="ap-check__box"></span>Doubles / Triples</label>
+                <label class="ap-check"><input type="checkbox" value="passenger"><span class="ap-check__box"></span>Passenger</label>
+              </div>
+            </div>
+
+            <div class="ap-field-group">
+              <label class="ap-group-label">Any violations or accidents in the last 3 years?</label>
+              <div class="ap-radio-group">
+                <label class="ap-radio">
+                  <input type="radio" name="violations" value="no" required>
+                  <span class="ap-radio__box"></span>
+                  No — clean record
+                </label>
+                <label class="ap-radio">
+                  <input type="radio" name="violations" value="yes">
+                  <span class="ap-radio__box"></span>
+                  Yes — I'll explain
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="ap-step" data-step="3">
+          <div class="ap-step__head">
+            <p class="ap-step__kicker">Step 3 of 3</p>
+            <h2 class="ap-step__title">Your Preferences</h2>
+            <p class="ap-step__desc">Help us match you to the right opportunity.</p>
+          </div>
+          <form class="ap-form" id="step3Form" novalidate>
+            <div class="ap-field-group">
+              <label class="ap-group-label">Position Type</label>
+              <div class="ap-card-radio-group">
+                <label class="ap-card-radio">
+                  <input type="radio" name="position" value="company" required>
+                  <div class="ap-card-radio__inner">
+                    <span class="ap-card-radio__title">Company Driver</span>
+                    <span class="ap-card-radio__sub">Drive BBE equipment, steady weekly pay</span>
+                  </div>
+                  <span class="ap-card-radio__check"></span>
+                </label>
+                <label class="ap-card-radio">
+                  <input type="radio" name="position" value="owner">
+                  <div class="ap-card-radio__inner">
+                    <span class="ap-card-radio__title">Owner Operator</span>
+                    <span class="ap-card-radio__sub">Use your own truck, higher earning potential</span>
+                  </div>
+                  <span class="ap-card-radio__check"></span>
+                </label>
+                <label class="ap-card-radio">
+                  <input type="radio" name="position" value="lease">
+                  <div class="ap-card-radio__inner">
+                    <span class="ap-card-radio__title">Lease Purchase</span>
+                    <span class="ap-card-radio__sub">Drive toward ownership of your truck</span>
+                  </div>
+                  <span class="ap-card-radio__check"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="ap-row">
+              <div class="ap-field">
+                <select class="ap-input ap-select" id="homeTime">
+                  <option value="" disabled selected></option>
+                  <option>Weekly</option>
+                  <option>Bi-weekly</option>
+                  <option>Monthly</option>
+                  <option>OTR (Over the Road)</option>
+                </select>
+                <label class="ap-label ap-label--select" for="homeTime">Preferred Home Time</label>
+              </div>
+              <div class="ap-field">
+                <select class="ap-input ap-select" id="startDate">
+                  <option value="" disabled selected></option>
+                  <option>Immediately</option>
+                  <option>Within 2 weeks</option>
+                  <option>Within 1 month</option>
+                  <option>2–3 months</option>
+                </select>
+                <label class="ap-label ap-label--select" for="startDate">Available to Start</label>
+              </div>
+            </div>
+
+            <div class="ap-field">
+              <textarea class="ap-input ap-textarea" id="message" placeholder=" " rows="4"></textarea>
+              <label class="ap-label" for="message">Anything else you'd like us to know? (optional)</label>
+            </div>
+          </form>
+        </div>
+
+        <!-- SUCCESS -->
+        <div class="ap-success" id="apSuccess">
+          <div class="ap-success__icon">
+            <svg class="ap-success__circle" viewBox="0 0 52 52">
+              <circle class="ap-success__circle-bg" cx="26" cy="26" r="25"/>
+              <path class="ap-success__check" d="M14,26 L22,34 L38,18"/>
+            </svg>
+          </div>
+          <h2 class="ap-success__title">Application Submitted!</h2>
+          <p class="ap-success__msg">Thank you for applying. Our team will review your application and reach out within 24 hours.</p>
+          <a href="index.html" class="ap-success__btn">Back to Home</a>
+        </div>
+
+      </div><!-- /ap-form-wrap -->
+
+      <!-- Navigation buttons -->
+      <div class="ap-nav" id="apNav">
+        <button class="ap-btn ap-btn--back" id="btnBack" style="display:none">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="11,3 5,9 11,15"/>
+          </svg>
+          Back
+        </button>
+        <button class="ap-btn ap-btn--next" id="btnNext">
+          Continue
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="7,3 13,9 7,15"/>
+          </svg>
+        </button>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="apply.js"></script>
+</body>
+</html>
